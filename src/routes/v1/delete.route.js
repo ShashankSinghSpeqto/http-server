@@ -1,7 +1,8 @@
-import express from "express";
+const express = require("express");
+const deleteController = require("../../controllers/delete.controller");
 
 const router = express.Router();
 
-router.delete("/", deleteController);
+// router.delete("/", deleteController.delete);
 
-export default router;
+module.exports = router;

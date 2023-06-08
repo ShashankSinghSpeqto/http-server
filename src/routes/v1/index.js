@@ -1,7 +1,7 @@
-import getRoute from "./get.route";
-import postRoute from "./post.route";
-import putRoute from "./put.route.js";
-import deleteRoute from "./delete.route";
+const getRoute = require("./get.route");
+const postRoute = require("./post.route");
+const putRoute = require("./put.route");
+const deleteRoute = require("./delete.route");
 
 const router = express.Router();
 
@@ -15,11 +15,11 @@ const defaultRoutes = [
         route: postRoute,
     },
     {
-        path: "./put",
+        path: "/put",
         route: putRoute,
     },
     {
-        path: "./delete",
+        path: "/delete",
         route: deleteRoute,
     },
 ];
@@ -28,4 +28,4 @@ defaultRoutes.forEach((route) => {
     router.use(route.path, route.route);
 });
 
-export default router;
+module.exports = router;

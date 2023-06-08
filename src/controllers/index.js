@@ -1,4 +1,1 @@
-export { insertController } from "./insert";
-export { deleteController } from "./delete";
-export { insertController } from "./insert";
-export { getController } from "./get";
+// module.exports.getController = require("./get.controller");
